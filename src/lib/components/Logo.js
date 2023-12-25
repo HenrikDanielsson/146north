@@ -3,7 +3,7 @@ import './Logo146.css';
 
 // Call this using <Logo146 text="Layout | Design | Code" />
 
-export const Logo146 = (props) => {
+export const Logo = (props) => {
 	function Home() {
 		window.location.href = 'https://www.146.se';
 	}
@@ -24,4 +24,4 @@ export const Logo146 = (props) => {
 	);
 };
 
-export default Logo146;
+export default Logo;

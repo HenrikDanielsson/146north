@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opaacity: 1;
+	}
+}
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opaacity: 0;
+	}
+}
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #333;
+	margin-top: 25vh;
+	margin-bottom: 5vh;
+	font-size: max(2em, 54px);
+}
+header h1 {
+	font-weight: 500;
+	letter-spacing: calc(2px * 2vmin);
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	opacity: 1;
+	transition: opacity 2s;
+}
+header h1 .small {
+	font-weight: 150;
+	font-size: 0.5em;
+}
+header h1:hover {
+	opacity: 0.8;
+	transition: opacity 0.5s;
+}
+header h1:hover .rotate {
+	color: #ff79e9;
+	transition: color 0.5s;
+}
+header h2.slogan {
+	font: 1rem;
+	color: #ccc;
+	padding: 0;
+	margin: -0.7em 0 0 0;
+	letter-spacing: 0.065em;
+	text-transform: uppercase;
+	font-size: 0.24em;
+	font-weight: 300;
+}
+
+header h1 .reverse {
+	display: inline-block;
+	position: relative;
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+header h1 .rotate {
+	visibility: visible;
+	font-size: 1em;
+	position: relative;
+	display: inline-block;
+	margin: 0 0.072em 0 -0.072em;
+	padding: 0;
+	transform: rotate(-34.5deg);
+	transition: color 2s;
+}

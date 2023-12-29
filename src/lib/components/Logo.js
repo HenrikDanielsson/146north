@@ -1,17 +1,29 @@
-import React from 'react';
-import './Logo146.css';
-
-// Call this using <Logo146 text="Layout | Design | Code" />
+import React, { useEffect, useState } from 'react';
 
 export const Logo = (props) => {
+	const [isClient, setIsClient] = useState(false);
+
+	useEffect(() => {
+		// Uppdatera isClient till true när komponenten mountas på klienten
+		setIsClient(true);
+	}, []);
+
 	function Home() {
-		window.location.href = 'https://www.146.se';
+		if (isClient) {
+			// Eftersom vi är på klient-sidan kan vi säkert använda window-objektet
+			window.location.href = 'https://www.146.se';
+		}
 	}
-	let size = { transform: `scale(` + props.size + `)` };
+
+	let size = { transform: `scale(${props.logosize})` };
+	let headerstyle = {
+		marginTop: props.margin.split(',')[0],
+		marginBottom: props.margin.split(',')[1],
+	};
 
 	return (
 		<div>
-			<header>
+			<header style={headerstyle}>
 				<h1 onClick={Home} style={size}>
 					14<span className="reverse">6</span>
 					<span className="small">

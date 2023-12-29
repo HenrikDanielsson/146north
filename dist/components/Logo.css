@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
-* {
-	margin: 0;
-	padding: 0;
-}
-
 @keyframes fadein {
 	0% {
 		opacity: 0;
@@ -20,23 +15,29 @@
 		opaacity: 0;
 	}
 }
-header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.header {
+	cursor: pointer;
+	width: 100%;
+	font-family: 'Rubik', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	margin: auto;
 	color: #333;
-	font-size: max(2em, 54px);
+	max-height: max-content !important;
+	font-size: max(3vh, 54px);
+	text-align: center;
 }
-header h1 {
+.header h1 {
 	font-weight: 500;
 	letter-spacing: calc(2px * 2vmin);
+	display: inline-block;
 	margin: 0;
 	padding: 0;
-	display: inline-block;
 	opacity: 1;
-	transition: opacity 2s;
+	transition: opacity 1s;
 }
-header h1 .small {
+.header h1 .small {
 	font-weight: 150;
 	font-size: 0.5em;
 }
@@ -44,12 +45,11 @@ header h1:hover {
 	opacity: 0.8;
 	transition: opacity 0.5s;
 }
-header h1:hover .rotate {
+.header h1:hover .rotate {
 	color: #ff79e9;
 	transition: color 0.5s;
 }
-header h2.slogan {
-	font: 1rem;
+.header h2.slogan {
 	color: #ccc;
 	padding: 0;
 	margin: -0.7em 0 0 0;
@@ -57,9 +57,10 @@ header h2.slogan {
 	text-transform: uppercase;
 	font-size: 0.24em;
 	font-weight: 300;
+	text-align: center;
 }
 
-header h1 .reverse {
+.header h1 .reverse {
 	display: inline-block;
 	position: relative;
 	-moz-transform: scale(-1, 1);
@@ -69,7 +70,7 @@ header h1 .reverse {
 	transform: scale(-1, 1);
 }
 
-header h1 .rotate {
+.header h1 .rotate {
 	visibility: visible;
 	font-size: 1em;
 	position: relative;
@@ -77,5 +78,5 @@ header h1 .rotate {
 	margin: 0 0.072em 0 -0.072em;
 	padding: 0;
 	transform: rotate(-34.5deg);
-	transition: color 2s;
+	transition: color 1s;
 }

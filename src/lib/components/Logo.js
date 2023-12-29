@@ -1,4 +1,6 @@
+'use client';
 import React, { useEffect, useState } from 'react';
+import './Logo.module.css';
 
 export const Logo = (props) => {
 	const [isClient, setIsClient] = useState(false);
@@ -22,16 +24,14 @@ export const Logo = (props) => {
 	};
 
 	return (
-		<div>
-			<header style={headerstyle}>
-				<h1 onClick={Home} style={size}>
-					14<span className="reverse">6</span>
-					<span className="small">
-						.S<span className="rotate">E</span>
-					</span>
-				</h1>
-				<h2 className="slogan">{props.text}</h2>
-			</header>
+		<div className="header" style={headerstyle}>
+			<h1 onClick={Home} style={size}>
+				14<span className="reverse">6</span>
+				<span className="small">
+					.S<span className="rotate">E</span>
+				</span>
+			</h1>
+			<h2 className="slogan">{props.text}</h2>
 		</div>
 	);
 };
